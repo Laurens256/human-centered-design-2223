@@ -73,7 +73,7 @@ Deze week heb je het tweede gesprek met je testpersoon. Wat ga je testen? Wat wi
 
 ### Woensdag 26 april
 
-Woensdag krijg je een college over testen. 
+Donderdag krijg je een college over testen. 
 Lees voor deze les de artikelen:  
 [10 Usability Lessons van Steve Krug](https://www.uxbooth.com/articles/10-usability-lessons-from-steve-krugs-dont-make-me-think/) 
 en [Design for Both Needs and Wants: Applying Anderson’s User Experience Hierarchy of Needs](https://thevisualcommunicationguy.com/2018/11/08/design-for-both-needs-and-wants-applying-andersons-user-experience-hierarchy-of-needs/) lezen.

@@ -1,0 +1,18 @@
+{
+	"name": "human-centered-design-2223",
+	"version": "1.0.0",
+	"description": "Human Centered Design is een  methode voor het ontwerpen van gebruiksvriendelijke interactieve toepassingen.",
+	"main": "main.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"dev": "vite --port 3000",
+		"build": "vite build",
+		"serve": "vite preview"
+	},
+	"author": "Laurens256",
+	"license": "MIT",
+	"devDependencies": {
+		"typescript": "^5.0.4",
+		"vite": "^4.2.2"
+	}
+}
