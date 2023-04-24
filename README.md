@@ -1,4 +1,6 @@
 # Human Centered Design
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 Tijdens dit project hebben we voor Petra, die blind is, een virtuele kledingkast gemaakt om haar te helpen met het uitzoeken van passende kleding.
 
@@ -9,6 +11,38 @@ Tijdens dit project hebben we voor Petra, die blind is, een virtuele kledingkast
 - Project
   - [License](#license)
 
+## Installation
+
+1. Clone the repository
+
+```bash
+$ git clone git@github.com:Laurens256/human-centered-design-2223.git
+```
+
+2. Navigate to the folder
+
+```bash
+$ cd FOLDER-NAME/human-centered-design-2223
+```
+
+3. Install the (dev)dependencies
+
+```bash
+$ npm install
+```
+
+4. Start the website in development mode
+
+```bash
+$ npm run dev
+```
+
+5. Open the website in your browser
+
+```
+http://localhost:3000/
+```
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
@@ -16,12 +50,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
 <!-- ☝️ replace this description with a description of your own work -->
-
-<!-- replace the code in the /docs folder with your own, so you can showcase your work with GitHub Pages 🌍 -->
-
-<!-- Add a nice poster image here at the end of the week, showing off your shiny frontend 📸 -->
-
-<!-- Maybe a table of contents here? 📚 -->
 
 <!-- How about a section that describes how to install this project? 🤓 -->
 
