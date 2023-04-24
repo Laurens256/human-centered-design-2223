@@ -1,5 +1,17 @@
-# Human Centered Design @cmda-minor-web 2022 - 2023
+# Human Centered Design
 
+Tijdens dit project hebben we voor Petra, die blind is, een virtuele kledingkast gemaakt om haar te helpen met het uitzoeken van passende kleding.
+
+## Navigation
+
+- Research
+  - [Interview](./docs/interview.md)
+- Project
+  - [License](#license)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
