@@ -6,36 +6,29 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Virtuele kledingkast</title>
 
-		<script src="scripts/main.ts" defer></script>
+		<script src="scripts/main.ts" type="module"></script>
 	</head>
 	<body>
-		<label
-			>Kies je bovenkleding test 1
-			<select name="bovenkleding">
-				<option value="zachte_blouse">zachte blouse</option>
-				<option value="bloemen_shirt">bloemen shirt</option>
-				<option value="effen_shirt">effen shirt</option>
-			</select>
-		</label>
-
-		<br />
-
-		<fieldset>
-			<legend>Kies je bovenkleding test 2</legend>
-			<label
-				>zachte blouse
-				<input type="radio" name="bovenkleding1" value="zachte blouse" />
-			</label>
-
-			<label
-				>bloemen shirt
-				<input type="radio" name="bovenkleding1" value="bloemen shirt" />
-			</label>
-
-			<label
-				>effen shirt
-				<input type="radio" name="bovenkleding1" value="effen shirt" />
-			</label>
+		<fieldset class="upper-clothes">
+			<legend>kies je bovenkleding</legend>
 		</fieldset>
+
+		<fieldset class="lower-clothes">
+			<legend>kies je onderkleding</legend>
+		</fieldset>
+
+		<div class="speak sr-only">aaa</div>
 	</body>
 </html>
+
+<style>
+	.sr-only {
+		clip: rect(0 0 0 0);
+		clip-path: inset(50%);
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		white-space: nowrap;
+		width: 1px;
+	}
+</style>
