@@ -1,23 +1,15 @@
 import { Clothes } from './types';
+import { readClothingInfo } from './screenReader';
 
-
-let currentFieldset: HTMLFieldSetElement | null = null;
-const initClothes = (target: 'upper' | 'lower', clothes: Clothes[]): void => {
+const initClothes = (target: 'upper' | 'lower', clothesArr: Clothes[]): void => {
 	const clothesFieldset: HTMLFieldSetElement | null = document.querySelector(
 		`fieldset.${target}-clothes`
 	);
 
-	clothesFieldset?.addEventListener('focusin', (event) => {
-		if (currentFieldset !== clothesFieldset) {
-			console.log('nieuwe focus :0');
-		}
-
-		currentFieldset = clothesFieldset;
-	});
-
 	if (!clothesFieldset) return;
+	const fragment = document.createDocumentFragment();
 
-	const clothesHTML = clothes
+	clothesArr
 		.sort((a, b) => {
 			const nameA = a.name.toLowerCase();
 			const nameB = b.name.toLowerCase();
@@ -27,20 +19,42 @@ const initClothes = (target: 'upper' | 'lower', clothes: Clothes[]): void => {
 
 			return 0;
 		})
-		.map((clothes) => {
+		.forEach((clothes) => {
 			const { name, styles, attributes } = clothes;
 
-			return `
-				<label>${name}
-					<input type="radio" name="${target}_clothes" 
-					value="${name}" 
-					data-styles="${styles?.join(';')}" 
-					data-attributes="${attributes?.join(';')}"/>
-				</label>`;
-		})
-		.join('');
+			const label = createElement('label', { textContent: name });
 
-	clothesFieldset.insertAdjacentHTML('beforeend', clothesHTML);
+			const input = createElement(
+				'input',
+				{
+					type: 'radio',
+					name: `${target}_clothes`,
+					value: name
+				},
+				{
+					'data-styles': styles?.join(';'),
+					'data-attributes': attributes?.join(';')
+				}
+			);
+
+			input.addEventListener('keydown', readClothingInfo);
+
+			label.appendChild(input);
+			fragment.appendChild(label);
+		});
+
+	clothesFieldset.appendChild(fragment);
+};
+
+const createElement = (tagName: string, props?: any, dataset?: any) => {
+	const element = document.createElement(tagName);
+	Object.assign(element, props);
+	if (dataset) {
+		Object.keys(dataset).forEach((key) => {
+			element.setAttribute(key, dataset[key]);
+		});
+	}
+	return element;
 };
 
 export { initClothes };

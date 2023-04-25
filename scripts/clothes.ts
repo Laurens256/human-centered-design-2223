@@ -23,6 +23,11 @@ const lowerClothes: Clothes[] = [
 		name: 'lange broek',
 		styles: ['casual', 'formeel'],
 		attributes: ['zacht', 'dik', 'warm']
+	},
+	{
+		name: 'lange broek',
+		styles: [],
+		attributes: ['zacht', 'dik', 'warm']
 	}
 ];
 
