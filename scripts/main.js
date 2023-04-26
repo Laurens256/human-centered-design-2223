@@ -42,6 +42,7 @@ const filterClothes = (e) => {
 		} else {
 			clothes.classList.add('hidden');
 			input.checked = false;
+			input.dispatchEvent(new Event('change'));
 		}
 	});
 };
