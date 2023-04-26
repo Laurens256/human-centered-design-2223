@@ -8,6 +8,7 @@ Tijdens dit project hebben we voor Petra, die blind is, een virtuele kledingkast
 
 - Research
   - [Interview](./docs/interview.md)
+  - [Test](./docs/tests.md)
 - Project
   - [License](#license)
 
