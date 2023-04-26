@@ -17,3 +17,4 @@ Hij leest niet voor of het matched of niet, dat is dus niet duidelijk.
 Petra had eigenlijk niet door dat de attributen en stijlen voorgelezen konden worden.
 Het is niet duidelijk wanneer het einde van de pagina bereikt is.
 Lastig om weer bij de pagina te komen wanneer er buiten de pagina getabbed is.
+Petra wil graag de kleur van de kledingstukken weten
