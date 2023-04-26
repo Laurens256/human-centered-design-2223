@@ -1,9 +1,8 @@
-import { Clothes } from './types';
-import { readClothingInfo } from './screenReader';
-import { upperClothes, lowerClothes } from './clothes';
+import { readClothingInfo } from './screenReader.js';
+import { upperClothes, lowerClothes } from './clothes.js';
 
-const initClothes = (target: 'upper' | 'lower', clothesArr: Clothes[]): void => {
-	const clothesFieldset: HTMLFieldSetElement | null = document.querySelector(
+const initClothes = (target, clothesArr) => {
+	const clothesFieldset = document.querySelector(
 		`fieldset.${target}-clothes`
 	);
 
@@ -49,8 +48,8 @@ const initClothes = (target: 'upper' | 'lower', clothesArr: Clothes[]): void => 
 	clothesFieldset.appendChild(fragment);
 };
 
-const generateSummary = (e: Event) => {
-	const target = e.target as HTMLInputElement;
+const generateSummary = (e) => {
+	const target = e.target;
 
 	const { name, value, dataset } = target;
 
@@ -71,9 +70,9 @@ const generateSummary = (e: Event) => {
 	checkIfMatches();
 };
 
-let selectedUpper: Clothes | null = null;
-let selectedLower: Clothes | null = null;
-const matchText = document.querySelector('p.matches') as HTMLParagraphElement;
+let selectedUpper = null;
+let selectedLower = null;
+const matchText = document.querySelector('p.matches');
 const checkIfMatches = () => {
 	let output = '';
 	if (!selectedUpper || !selectedLower) {
@@ -95,7 +94,7 @@ const checkIfMatches = () => {
 	matchText.textContent = output;
 };
 
-const createElement = (tagName: string, props?: any, dataset?: any) => {
+const createElement = (tagName, props, dataset) => {
 	const element = document.createElement(tagName);
 	Object.assign(element, props);
 	if (dataset) {

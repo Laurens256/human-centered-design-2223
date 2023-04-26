@@ -1,12 +1,12 @@
-const speakDiv = document.querySelector('div.speak') as HTMLDivElement;
+const speakDiv = document.querySelector('div.speak');
 
-const srSpeak = (text: string, priority: 'polite' | 'assertive' = 'polite') => {
+const srSpeak = (text, priority = 'polite') => {
 	speakDiv.setAttribute('aria-live', priority);
 	speakDiv.textContent = text;
 };
 
-const readClothingInfo = (e: KeyboardEvent) => {
-	const target = e.target as HTMLInputElement;
+const readClothingInfo = (e) => {
+	const target = e.target;
 
 	if (e.key === 'q') {
 		e.preventDefault();

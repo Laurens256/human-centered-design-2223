@@ -1,6 +1,4 @@
-import { Clothes } from './types';
-
-const upperClothes: Clothes[] = [
+const upperClothes = [
 	{
 		name: 'zachte blouse',
 		styles: ['casual'],
@@ -13,7 +11,7 @@ const upperClothes: Clothes[] = [
 	}
 ];
 
-const lowerClothes: Clothes[] = [
+const lowerClothes = [
 	{
 		name: 'korte broek',
 		styles: ['casual', 'sportief'],

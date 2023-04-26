@@ -1,7 +1,6 @@
-import { upperClothes, lowerClothes } from './clothes';
-import { initClothes } from './buildHTML';
-import { srSpeak } from './screenReader';
-import { Clothes } from './types';
+import { upperClothes, lowerClothes } from './clothes.js';
+import { initClothes } from './buildHTML.js';
+import { srSpeak } from './screenReader.js';
 
 const init = () => {
 	initClothes('upper', upperClothes);
@@ -25,9 +24,9 @@ const init = () => {
 	});
 };
 
-let selectedFilters: Set<string> = new Set();
-const filterClothes = (e: Event) => {
-	const target = e.target as HTMLInputElement;
+let selectedFilters = new Set();
+const filterClothes = (e) => {
+	const target = e.target;
 	const { value } = target;
 
 	target.checked ? selectedFilters.add(value) : selectedFilters.delete(value);
@@ -35,7 +34,7 @@ const filterClothes = (e: Event) => {
 
 	allClothes.forEach((clothes) => {
 		// check if any of the dataset styles, are in the selectedFilters set
-		const input = clothes.querySelector('input') as HTMLInputElement;
+		const input = clothes.querySelector('input');
 		const { dataset } = input;
 
 		if (dataset.styles?.split(';').some((style) => selectedFilters.has(style)) || selectedFilters.size === 0) {
