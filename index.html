@@ -10,38 +10,21 @@
 		<script src="scripts/main.js" type="module"></script>
 	</head>
 	<body>
-		<h1>
-			virtuele kledingkast. druk op q om stijlen van geselecteerde kleding te horen, a om
-			de eigenschappen te horen, w om deze hints nogmaals te horen
-		</h1>
+		<fieldset class="category">
+			<legend>virtuele kledingkast, kies de stijl van je kleding</legend>
 
-		<fieldset>
-			<legend>optioneel: filteer op stijl, spatie om te selecteren</legend>
-			<label><input type="checkbox" value="formeel" name="stijl_filter" />formeel</label>
-			<label><input type="checkbox" value="casual" name="stijl_filter" />casual</label>
-			<label
-				><input type="checkbox" value="sportief" name="stijl_filter" />sportfief</label
-			>
+			<a href="#formeel" data-query="stijl" data-query-value="formeel">formeel</a>
+			<a href="#casual" data-query="stijl" data-query-value="casual">casual</a>
+			<a href="#sportief" data-query="stijl" data-query-value="sportief">sportief</a>
 		</fieldset>
 
-		<section>
-			<fieldset class="upper-clothes">
-				<legend>kies je bovenkleding, gebruik pijltjes om te wisselen</legend>
-			</fieldset>
+		<fieldset class="category upper-clothing-container">
+			<legend>bovenkleding, huidig filter <span class="currentfilter"></span></legend>
+		</fieldset>
 
-			<fieldset class="lower-clothes">
-				<legend>kies je onderkleding, gebruik pijltjes om te wisselen</legend>
-			</fieldset>
-		</section>
-
-		<section class="summary-section">
-			<h2>huidige selectie</h2>
-			<ul>
-				<li class="selected-upper">bovenkleding: niet gekozen</li>
-				<li class="selected-lower">onderkleding: niet gekozen</li>
-			</ul>
-			<p class="matches"></p>
-		</section>
+		<fieldset class="category lower-clothing-container">
+			<legend>onderkleding, huidig filter <span class="currentfilter"></span></legend>
+		</fieldset>
 
 		<div class="speak sr-only"></div>
 	</body>
