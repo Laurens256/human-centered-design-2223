@@ -1,6 +1,6 @@
-## test 1 (klein)
+## Test 1 (klein)
 
-Na het [eerste interview](./interview.md) heb ik een kleine test afgenomen met Petra om te kijken welke manier van het selecteren van kledingstukken het beste werkt. De HTML elementen die ik hiervoor gebruikt heb zijn een `<input type="radio">` en een `<select>`. 
+Na het [eerste interview](./interview.md) heb ik een kleine test afgenomen met Petra om te kijken welke manier van het selecteren van kledingstukken het beste werkt. De HTML elementen die ik hiervoor gebruikt heb zijn een `<input type="radio">` en een `<select>`.
 
 Het selecteren met het `<select>` element ging meteen al best moeizaam omdat Petra meteen op tab drukte om naar het volgende kledingstuk te gaan. Hierdoor werd niet het volgende kledingstuk maar de volgende categorie geselecteerd omdat een `<select>` element met de pijltjes toesten bediend moet worden.
 
@@ -8,7 +8,7 @@ Het selecteren met het `<input type="radio">` element ging een stukje beter. Hie
 
 ## Test 2
 
-Voor de tweede, grotere test, heb ik het filteren en selecteren van kledingstukken uitgewerkt. Kledingstukken kunnen gefilterd worden op stijl maar voor een verdere uitwerking zou dit ook op kleur en andere attributen kunnen.
+Voor de tweede, grotere test, heb ik het filteren en selecteren van kledingstukken uitgewerkt. Kledingstukken kunnen gefilterd worden op stijl maar voor een verdere uitwerking zou dit ook op kleur en andere attributen kunnen. Het doel van deze test is om problemen te identificeren bij het kiezen en samenstellen van outfits.
 
 ### Punten om op te letten
 
@@ -16,11 +16,23 @@ Voor de tweede, grotere test, heb ik het filteren en selecteren van kledingstukk
 - Is het duidelijk of de kleding uiteindelijk matched?
 - Wordt alles goed voorgelezen?
 
-### Uit het gesprek gehaald
+### Bevindingen
 
-Petra tabbed helemaal door alle kleding in plaats van per onderdeel met de pijltjes te selecteren.
-Hij leest niet voor of het matched of niet, dat is dus niet duidelijk.
-Petra had eigenlijk niet door dat de attributen en stijlen voorgelezen konden worden.
-Het is niet duidelijk wanneer het einde van de pagina bereikt is.
-Lastig om weer bij de pagina te komen wanneer er buiten de pagina getabbed is.
-Petra wil graag de kleur van de kledingstukken weten
+- Petra tabbed helemaal door alle kleding in plaats van per onderdeel met de pijltjes te selecteren.
+- Hij leest niet voor of het matched of niet, dat is dus niet duidelijk.
+- Petra had eigenlijk niet door dat de attributen en stijlen voorgelezen konden worden.
+- Het is niet duidelijk wanneer het einde van de pagina bereikt is.
+- Lastig om weer bij de pagina te komen wanneer er buiten de pagina getabbed is.
+- Petra wil graag de kleur van de kledingstukken weten
+
+### Verbeterpunten
+
+- Het selecteren van kledingstukken met de pijltjestoetsen moet duidelijker of anders worden gedaan.
+- Er moet duidelijker worden gegeven of de kledingstukken bij elkaar passen of niet.
+- De attributen en stijlen kunnen sneller / eerder in het proces voorgelezen worden.
+- Het moet duidelijk zijn wanneer het einde van de pagina bereikt is.
+- De kleur van de kledingstukken moet worden aangegeven.
+
+### Conclusie
+
+Zowel het selecteren van kleding als het samenstellen van een passende outfit kan nog verbeterd worden. In volgende iteraties is het belangrijk om de controls te versimpelen zodat de pagina helemaal te gebruiken is met alleen maar de tab knop en de enter knop. Ook moet er duidelijker worden aangegeven of de kledingstukken bij elkaar passen of niet.
