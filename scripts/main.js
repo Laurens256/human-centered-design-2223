@@ -35,6 +35,7 @@ const changeQuery = (e) => {
 
 const clearQuery = () => {
 	window.history.replaceState(null, null, window.location.pathname);
+	filterClothes('');
 };
 
 // jump to next category after link is clicked
