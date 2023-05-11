@@ -9,6 +9,7 @@ const init = () => {
 		element.addEventListener('click', changeQuery);
 	});
 
+	// make sure no filters or query are active on page load
 	window.addEventListener('load', () => {
 		clearQuery();
 	});
@@ -25,6 +26,7 @@ const changeQuery = (e) => {
 
 	window.history.replaceState(null, null, `${window.location.pathname}?${urlParams}`);
 
+	// if the changed query is stijl, clothing should be filtered
 	if (query === 'stijl') {
 		filterClothes(queryValue);
 	}
@@ -33,12 +35,15 @@ const changeQuery = (e) => {
 	jumpToNextCategory(currentTarget);
 };
 
+const currentFilterSpans = document.querySelectorAll('span.currentfilter');
+// clear url query and reset any active filters
 const clearQuery = () => {
 	window.history.replaceState(null, null, window.location.pathname);
 	filterClothes('');
+	setCurrentFilter();
 };
 
-// jump to next category after link is clicked
+// jump to next category after link is clicked, need to test if screenreader correctly reads out the selected item before the next category is read
 const jumpToNextCategory = (current) => {
 	const nextParent = current.closest('.category').nextElementSibling;
 
@@ -59,6 +64,13 @@ const filterClothes = (filter) => {
 				element.classList.add('hidden');
 			}
 		}
+	});
+	setCurrentFilter(filter);
+};
+
+const setCurrentFilter = (filter = 'geen') => {
+	currentFilterSpans.forEach((span) => {
+		span.textContent = filter;
 	});
 };
 
