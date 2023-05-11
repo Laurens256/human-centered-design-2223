@@ -29,13 +29,15 @@ const changeQuery = (e) => {
 	// if the changed query is stijl, clothing should be filtered
 	if (query === 'stijl') {
 		filterClothes(queryValue);
+	} else if (urlParams.has('bovenkleding') && urlParams.has('onderkleding')) {
+		jumpToResults();
 	}
 
 	srSpeak(`geselecteerd: ${currentTarget.textContent}`, 'assertive');
 	jumpToNextCategory(currentTarget);
 };
 
-const currentFilterSpans = document.querySelectorAll('span.currentfilter');
+const currentFilterSpans = document.querySelectorAll('span.current-filter');
 // clear url query and reset any active filters
 const clearQuery = () => {
 	window.history.replaceState(null, null, window.location.pathname);
@@ -48,8 +50,13 @@ const jumpToNextCategory = (current) => {
 	const nextParent = current.closest('.category').nextElementSibling;
 
 	if (nextParent?.classList.contains('category')) {
-		nextParent.querySelector('a[data-query]')?.focus();
+		nextParent.querySelector('a[data-query]:not(.hidden)')?.focus();
 	}
+};
+
+const resultsContainer = document.querySelector('.matches-text');
+const jumpToResults = () => {
+	resultsContainer.focus();
 };
 
 // filter clothes based on style, hidden class gets hidden using css which also hides the element from screenreaders
