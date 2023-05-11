@@ -20,14 +20,15 @@ const loadHTML = () => {
 // generate clothing html from template
 const generateClothingHTML = (item, queryValue) => {
 	const { name, styles, attributes, colors } = item;
-	const slug = name.toLowerCase().replace(' ', '-');
+	const slug = name.toLowerCase().replace(/\s/g, '-');
 	const stylesString = styles.join(';');
 	const attributesString = attributes.join(';');
 	const colorsString = colors.join(', ');
+	const colorsDataValue = colors.join(';');
 
 	return `
 	  <a href="#${slug}" class="clothing" data-query="${queryValue}" data-query-value="${slug}"
-		data-styles="${stylesString}" data-attributes="${attributesString}">
+		data-styles="${stylesString}" data-attributes="${attributesString}" data-colors="${colorsDataValue}">
 		${name}: ${colorsString}
 	  </a>
 	`;
