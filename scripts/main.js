@@ -89,7 +89,11 @@ const readResults = (urlParams) => {
 	if (overlap.length === 0) {
 		srSpeak('geen overlap in huidige selectie', 'assertive');
 	} else {
-		srSpeak(`overlap in huidige selectie: ${overlap.join(', ')}`, 'assertive');
+		const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
+		srSpeak(
+			`overlap in huidige selectie: ${overlap.join(', ')}, ${randomCompliment}`,
+			'assertive'
+		);
 	}
 };
 
@@ -122,5 +126,23 @@ const srSpeak = (text, priority = 'polite') => {
 	speakDiv.setAttribute('aria-live', priority);
 	speakDiv.textContent = text;
 };
+
+const compliments = [
+	'Wat zie je er mooi uit!',
+	'Staat je goed die outfit!',
+	'Geweldige stijl heb je!',
+	'Prachtige outfit, echt waar!',
+	'Je ziet er fantastisch uit!',
+	'Wauw, je ziet er geweldig uit!',
+	'Je outfit is echt fantastisch!',
+	'Wat zie je er elegant uit!',
+	'Die kleur staat je super!',
+	'Je ziet er prachtig uit vandaag!',
+	'Je ziet er zo chic uit!',
+	'Je ziet er geweldig uit in die jurk!',
+	'Die outfit is helemaal jouw stijl!',
+	'Je ziet er zo stijlvol uit vandaag!',
+	'Je ziet er stralend uit!'
+];
 
 init();
