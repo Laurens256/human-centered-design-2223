@@ -25,6 +25,8 @@ const changeQuery = (e) => {
 	urlParams.set(query, queryValue);
 
 	window.history.replaceState(null, null, `${window.location.pathname}?${urlParams}`);
+	
+	srSpeak(`geselecteerd: ${currentTarget.textContent}`, 'assertive');
 
 	// if the changed query is stijl, clothing should be filtered
 	if (query === 'stijl') {
@@ -33,7 +35,6 @@ const changeQuery = (e) => {
 		readResults(urlParams);
 	}
 
-	srSpeak(`geselecteerd: ${currentTarget.textContent}`, 'assertive');
 	jumpToNextCategory(currentTarget);
 };
 
@@ -87,7 +88,7 @@ const readResults = (urlParams) => {
 	if (colorsOverlap) overlap.push('kleur');
 
 	if (overlap.length === 0) {
-		srSpeak('geen overlap in huidige selectie', 'assertive');
+		srSpeak('kleding matched niet', 'assertive');
 	} else {
 		const randomCompliment = compliments[Math.floor(Math.random() * compliments.length)];
 		srSpeak(
