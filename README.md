@@ -25,7 +25,7 @@ De oplossing die ik voor Petra heb bedacht is een virtuele kledingkast waarin ze
 
 [human-centered-design-2223-hazel.vercel.app](https://human-centered-design-2223-hazel.vercel.app/)
 
-## Wiki
+## Verdere documentatie
 
 Om de rest van mijn onderzoek, bevindingen en meer te lezen, kan je bij de wiki terecht. De wiki is [hier](https://github.com/Laurens256/human-centered-design-2223/wiki) te vinden.
 
